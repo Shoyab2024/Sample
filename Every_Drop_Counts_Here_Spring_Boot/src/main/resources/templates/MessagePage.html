@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You for Donating Blood</title>
+
+    <!-- Inline CSS -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;  /* White text to contrast with dark red background */
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        /* Header styles */
+        h1 {
+            font-size: 2.5em;
+            color: #d60000;  /* Dark red color */
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Message styles */
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #b30000;  /* Red color for the button */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            background-color: #990000;  /* Slightly darker red on hover */
+        }
+
+        /* Button focus effect */
+        .btn:focus {
+            outline: none;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 1.5em;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    
+    
+        <h1 th:text="${msg}"></h1>
+        
+        <p>Your donation is a gift of life. Thank you for your selfless act of kindness — you've made a real difference!</p>
+        
+
+        <!-- Button to go back to the main page or next action -->
+        <a href="/loginPage"><button class="btn">Go Back to Home</button></a>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+        <p>Your donation is a valuable contribution towards saving lives. We appreciate your generosity and kindness. You have made a difference!</p>
+
+ -->

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>All Donor Details</title>
+
+<style>
+  body {
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  h2 {
+    color: #d60000;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+
+  th {
+    background-color: #d60000;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #f9d6d5;
+  }
+
+  /* Form Styles */
+  form {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  input[type="text"], input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 80%;  /* Reduced width for input boxes */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  input[type="text"] {
+    background-color: #f9f9f9;
+  }
+
+  input[type="submit"] {
+    background-color: #d60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;  /* Reduced width for submit button */
+  }
+
+  input[type="submit"]:hover {
+    background-color: #990000;
+  }
+
+  input[type="submit"]:focus {
+    outline: none;
+  }
+</style>
+
+</head>
+<body>
+
+
+
+<!-- First Filter Form -->
+<form action="searchWithBloodGroupOrAddress">
+  <input type="text" placeholder="Blood Group Or Address" name="BloodGroupAdress">
+  <input type="submit" value="Get User Details">
+</form>
+
+<!-- Second Filter Form -->
+<form action="searchBloodGroupAndAddress">
+  <input type="text" placeholder="Blood Group" name="bloodgroup">
+  <input type="text" placeholder="Address" name="address">
+  <input type="submit" value="Get User Details">
+</form>
+
+<h2>All Donar Details</h2>
+<!-- Donor Details Table -->
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email Id</th>
+    <th>Address</th>
+    <th>Age</th>
+    <th>Blood Group</th>
+  </tr>
+
+  <tr th:each="donar : ${allDonarDetails}">
+    <td th:text="${donar.name}"></td>
+    <td th:text="${donar.emailid}"></td>
+    <td th:text="${donar.address}"></td>
+    <td th:text="${donar.age}"></td>
+    <td th:text="${donar.bloodgroup}"></td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+private int id;
+	private String name;
+	private String emailid;
+	private long mobilenumber;
+	private String password;
+	private String address;
+	private String gender;
+	private int age;
+	private String bloodgroup;
+ -->
+<!-- 
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email Id</th>
+    <th>Mobile Number</th>
+    <th>Password</th>
+    <th>Address</th>
+    <th>Gender</th>
+    <th>Age</th>
+    <th>Blood Group</th>
+  </tr>
+
+  <tr th:each="donar : ${allDonarDetails}">
+    <td th:text="${donar.id}"></td>
+    <td th:text="${donar.name}"></td>
+    <td th:text="${donar.emailid}"></td>
+    <td th:text="${donar.mobilenumber}"></td>
+    <td th:text="${donar.password}"></td>
+    <td th:text="${donar.address}"></td>
+    <td th:text="${donar.gender}"></td>
+    <td th:text="${donar.age}"></td>
+    <td th:text="${donar.bloodgroup}"></td>
+  </tr>
+
+</table>
+
+-->
+
+<!--
+
+<form action="getByUserName">
+			<input placeholder="Enter UserName " name="userName"> <input
+				type="submit" value="Get User Details">
+		</form>
+		<form action="getByUserGender">
+			<input placeholder="Enter Gender " name="gender"> <input
+				type="submit" value="Get User Details">
+		</form>
+					
+  -->

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Donar Registration</title>
+
+<style>
+  body {
+    background-color: #ffe6e6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .register-container {
+    margin: 50px auto;
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    text-align: center;
+  }
+  h1 {
+    color: #d60000;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  form input, form select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  form select {
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  form input[type="submit"] {
+    background-color: #d60000;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    width: 95%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  form input[type="submit"]:hover {
+    background-color: #b30000;
+  }
+  b {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+    color: #333;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- 
+    private int id;
+	private String name;
+	private String emailid;
+	private long mobilenumber;
+	private String password;
+	private String address;
+	private String gender;
+	private int age;
+	private String bloodgroup;
+	<input placeholder="Enter user Id" name="id" hidden="true"><br>
+ -->
+ <!--  
+ <center>
+<h1>Donar Registration</h1>
+<br>
+<form action="registration">
+
+<b>Name :</b>
+<input placeholder="Enter User Name" name="name"><br>
+<b>Email Id :</b>
+<input placeholder="Enter User Emaild " name="emailid"><br>
+<b>Mobile Number :</b>
+<input placeholder="Enter User Mobile Number" name="mobilenumber"><br>
+<b>Password :</b>
+<input placeholder="Enter User Password" name="password"><br>
+<b>Address :</b>
+<input placeholder="Enter User Address" name="address"><br>
+<b>Gender :</b>
+<input placeholder="Enter User Gender" name="gender"><br>
+<b>Age :</b>
+<input placeholder="Enter User Age" name="age"><br>
+<b>Blood Group :</b>
+<input placeholder="Enter User Blood Group" name="bloodgroup"><br><br>
+
+<input type="submit" value="Register">
+</form>
+
+</center>
+-->
+
+
+<div class="register-container">
+
+  <h1>Donor Registration</h1>
+
+  <form action="registration">
+
+    <input placeholder="Enter User Name" name="name"><br>
+    
+    <input placeholder="Enter User Email Id" name="emailid" required><br>
+
+    <input placeholder="Enter User Mobile Number" name="mobilenumber" required><br>
+
+    <input placeholder="Enter User Password" name="password" type="password" required><br>
+
+    <input placeholder="Enter User Address" name="address"><br>
+
+    <select name="gender">
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select><br>
+
+    <input placeholder="Enter User Age" name="age"><br>
+
+    <select name="bloodgroup" required>
+      <option value="">Select Blood Group</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+</div>
+
+</body>
+</html>
+
+<!-- 
+<h1 th:text="${exceptionmsg}"></h1>
+ -->
